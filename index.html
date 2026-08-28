@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lensa Purwakarta - Portal Berita</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #f59e0b;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #f59e0b;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1f2937, #374151);
+      color: white;
+      padding: 65px 5%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 27px;
+      margin-bottom: 22px;
+      border-left: 5px solid #f59e0b;
+      padding-left: 12px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-image {
+      height: 180px;
+      background: linear-gradient(135deg, #d1d5db, #9ca3af);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #374151;
+      font-weight: bold;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .category {
+      color: #d97706;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin: 7px 0;
+    }
+
+    .card p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .date {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .about {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .about h2 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 45px 20px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Lensa<span>Purwakarta</span></div>
+
+      <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#berita">Berita</a>
+        <a href="#daerah">Daerah</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="beranda">
+    <h1>Lensa Purwakarta</h1>
+    <p>Portal berita dan informasi masyarakat Purwakarta</p>
+  </section>
+
+  <main class="container">
+
+    <section id="berita">
+      <h2 class="section-title">Berita Terbaru</h2>
+
+      <div class="news-grid">
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Purwakarta</div>
+            <h3>Informasi Terkini Seputar Purwakarta</h3>
+            <p>
+              Berita dan informasi terbaru seputar masyarakat dan perkembangan daerah Purwakarta.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Masyarakat</div>
+            <h3>Kabar Masyarakat Purwakarta</h3>
+            <p>
+              Menyajikan informasi yang dekat dengan kehidupan masyarakat Purwakarta.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Daerah</div>
+            <h3>Perkembangan Daerah Hari Ini</h3>
+            <p>
+              Ikuti berbagai kabar dan perkembangan terbaru dari berbagai wilayah di Purwakarta.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Sosial</div>
+            <h3>Kegiatan Sosial dan Komunitas</h3>
+            <p>
+              Informasi mengenai kegiatan sosial, komunitas dan berbagai aktivitas masyarakat.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Olahraga</div>
+            <h3>Kabar Olahraga Purwakarta</h3>
+            <p>
+              Berita dan informasi seputar olahraga serta prestasi masyarakat Purwakarta.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">FOTO BERITA</div>
+          <div class="card-content">
+            <div class="category">Berita</div>
+            <h3>Berita Pilihan Lensa Purwakarta</h3>
+            <p>
+              Kumpulan informasi pilihan untuk masyarakat Purwakarta.
+            </p>
+            <span class="date">Lensa Purwakarta</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="tentang">
+      <h2>Tentang Lensa Purwakarta</h2>
+      <p>
+        Lensa Purwakarta adalah portal berita dan informasi masyarakat
+        yang menyajikan berbagai kabar seputar Purwakarta.
+      </p>
+      <p style="margin-top:10px;">
+        Kami hadir untuk memberikan informasi yang mudah diakses oleh masyarakat.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 <strong>Lensa Purwakarta</strong>
+    </p>
+    <p>Portal berita dan informasi masyarakat Purwakarta</p>
+  </footer>
+
+</body>
+  </html>
